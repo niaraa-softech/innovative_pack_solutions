@@ -287,31 +287,7 @@
 
   <p id="formStatus" style="margin-top:10px;"></p>
 </form>
-<script>
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("formStatus");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    fetch("https://formsubmit.co/ajax/the.perfect.triip@gmail.com", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      status.innerHTML = "✅ Thank you! Your message has been sent.";
-      status.style.color = "white";
-      form.reset();
-    })
-    .catch(error => {
-      status.innerHTML = "❌ Something went wrong. Please try again.";
-      status.style.color = "red";
-    });
-  });
-</script>
     </div></div>
                 <!-- Google Map -->
                 <div class="col-lg-6 col-md-12">
@@ -495,5 +471,6 @@ AP KURWANDI TAL AMBEGAON DIST:PUNE
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
 
 </html>
